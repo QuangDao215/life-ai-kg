@@ -1,0 +1,21 @@
+﻿{
+    "id":  "019c2cb1-dbfa-7732-85ab-c5fbf29769ba",
+    "job_type":  "kg_build",
+    "status":  "completed",
+    "progress":  100.0,
+    "total_items":  20,
+    "processed_items":  20,
+    "error_count":  9,
+    "error_message":  null,
+    "result":  {
+                   "processed_chunks":  20,
+                   "total_entities":  0,
+                   "total_relations":  0,
+                   "new_entities":  44,
+                   "new_relations":  57,
+                   "errors":  9
+               },
+    "created_at":  "2026-02-05T07:26:19.642536",
+    "started_at":  "2026-02-05T07:26:20.260782",
+    "completed_at":  "2026-02-05T07:35:23.921579"
+}

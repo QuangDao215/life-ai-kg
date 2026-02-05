@@ -1,0 +1,247 @@
+﻿{
+    "entity":  {
+                   "id":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
+                   "name":  "ambroxol",
+                   "normalized_name":  "ambroxol",
+                   "type":  "Compound/Drug",
+                   "description":  null,
+                   "aliases":  [
+
+                               ],
+                   "external_ids":  {
+
+                                    },
+                   "extra_data":  {
+
+                                  },
+                   "created_at":  "2026-02-05T07:26:20.345329Z",
+                   "updated_at":  "2026-02-05T07:26:20.345329Z"
+               },
+    "relations":  [
+                      {
+                          "relation_id":  "019c2cb2-4318-7e72-a537-568eff89021e",
+                          "direction":  "outgoing",
+                          "label":  "UPREGULATES",
+                          "confidence":  0.95,
+                          "neighbor":  {
+                                           "id":  "019c2cb2-42d3-783b-9572-16bbb637e6f0",
+                                           "name":  "Î²-glucocerebrosidase",
+                                           "type":  "Protein",
+                                           "relation_count":  0
+                                       },
+                          "evidence_count":  1
+                      },
+                      {
+                          "relation_id":  "019c2cb2-4320-76bb-a20d-8f8db0fa730b",
+                          "direction":  "outgoing",
+                          "label":  "UPREGULATES",
+                          "confidence":  0.95,
+                          "neighbor":  {
+                                           "id":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                                           "name":  "GCase",
+                                           "type":  "Protein",
+                                           "relation_count":  0
+                                       },
+                          "evidence_count":  1
+                      },
+                      {
+                          "relation_id":  "019c2cb2-4326-7064-a6f7-eebbe20370e4",
+                          "direction":  "outgoing",
+                          "label":  "UPREGULATES",
+                          "confidence":  0.95,
+                          "neighbor":  {
+                                           "id":  "019c2cb2-42da-74c7-9656-c329d8239a30",
+                                           "name":  "enzyme activity",
+                                           "type":  "Biomarker",
+                                           "relation_count":  0
+                                       },
+                          "evidence_count":  1
+                      },
+                      {
+                          "relation_id":  "019c2cb2-432d-73a5-86ed-bcbb1348772d",
+                          "direction":  "outgoing",
+                          "label":  "DOWNREGULATES",
+                          "confidence":  0.95,
+                          "neighbor":  {
+                                           "id":  "019c2cb2-42e2-7913-8aa4-1d1af926d03a",
+                                           "name":  "Î±-synuclein levels",
+                                           "type":  "Biomarker",
+                                           "relation_count":  0
+                                       },
+                          "evidence_count":  2
+                      },
+                      {
+                          "relation_id":  "019c2cb2-9b32-7cff-a1d9-4b9d2b461f75",
+                          "direction":  "outgoing",
+                          "label":  "UPREGULATES",
+                          "confidence":  0.95,
+                          "neighbor":  {
+                                           "id":  "019c2cb2-9b2a-7914-8c92-d17b0a00869f",
+                                           "name":  "enzyme activity",
+                                           "type":  "Phenotype",
+                                           "relation_count":  0
+                                       },
+                          "evidence_count":  1
+                      },
+                      {
+                          "relation_id":  "019c2cb2-9b52-750a-a636-49dea77b94f4",
+                          "direction":  "outgoing",
+                          "label":  "BINDS",
+                          "confidence":  0.85,
+                          "neighbor":  {
+                                           "id":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                                           "name":  "GCase",
+                                           "type":  "Protein",
+                                           "relation_count":  0
+                                       },
+                          "evidence_count":  2
+                      },
+                      {
+                          "relation_id":  "019c2cb2-4334-7978-8c51-a1ef84ac8d57",
+                          "direction":  "outgoing",
+                          "label":  "ASSOCIATED_WITH",
+                          "confidence":  0.9,
+                          "neighbor":  {
+                                           "id":  "019c2cb2-42e6-7a9e-ae2e-292b2305a270",
+                                           "name":  "pathogenetic pathway",
+                                           "type":  "Pathway",
+                                           "relation_count":  0
+                                       },
+                          "evidence_count":  3
+                      },
+                      {
+                          "relation_id":  "019c2cb3-0712-7015-8de4-fb2bff045a22",
+                          "direction":  "outgoing",
+                          "label":  "EXPRESSED_IN",
+                          "confidence":  0.9,
+                          "neighbor":  {
+                                           "id":  "019c2cb2-42ea-7c98-bde0-50a6e4563e03",
+                                           "name":  "cerebrospinal fluid",
+                                           "type":  "Tissue/Region",
+                                           "relation_count":  0
+                                       },
+                          "evidence_count":  1
+                      },
+                      {
+                          "relation_id":  "019c2cb2-4342-77c3-9459-cfa5172c4ebe",
+                          "direction":  "outgoing",
+                          "label":  "ASSOCIATED_WITH",
+                          "confidence":  0.95,
+                          "neighbor":  {
+                                           "id":  "019c2cb2-42ea-7c98-bde0-50a6e4563e03",
+                                           "name":  "cerebrospinal fluid",
+                                           "type":  "Tissue/Region",
+                                           "relation_count":  0
+                                       },
+                          "evidence_count":  3
+                      },
+                      {
+                          "relation_id":  "019c2cb2-9b4e-7559-8dc8-fbde0b275812",
+                          "direction":  "outgoing",
+                          "label":  "EXPRESSED_IN",
+                          "confidence":  0.95,
+                          "neighbor":  {
+                                           "id":  "019c2cb2-9b2f-73ec-88aa-5492e8c7b172",
+                                           "name":  "CSF",
+                                           "type":  "Tissue/Region",
+                                           "relation_count":  0
+                                       },
+                          "evidence_count":  3
+                      },
+                      {
+                          "relation_id":  "019c2cb4-265f-7f0d-859f-9b82d309113f",
+                          "direction":  "outgoing",
+                          "label":  "DOWNREGULATES",
+                          "confidence":  0.85,
+                          "neighbor":  {
+                                           "id":  "019c2cb4-264f-7ef8-8588-b47c4adad054",
+                                           "name":  "GCase activity",
+                                           "type":  "Biomarker",
+                                           "relation_count":  0
+                                       },
+                          "evidence_count":  1
+                      },
+                      {
+                          "relation_id":  "019c2cb4-2668-7afa-823b-1e8664a185ec",
+                          "direction":  "outgoing",
+                          "label":  "UPREGULATES",
+                          "confidence":  0.85,
+                          "neighbor":  {
+                                           "id":  "019c2cb4-2651-7369-bea0-faed94d8ca3d",
+                                           "name":  "Î±-synuclein concentration",
+                                           "type":  "Biomarker",
+                                           "relation_count":  0
+                                       },
+                          "evidence_count":  1
+                      },
+                      {
+                          "relation_id":  "019c2cb4-2673-73d9-af93-8071a7acdc19",
+                          "direction":  "outgoing",
+                          "label":  "UPREGULATES",
+                          "confidence":  0.85,
+                          "neighbor":  {
+                                           "id":  "019c2cb4-2653-79c8-ad2a-0e92e7e838aa",
+                                           "name":  "GCase protein levels",
+                                           "type":  "Biomarker",
+                                           "relation_count":  0
+                                       },
+                          "evidence_count":  1
+                      },
+                      {
+                          "relation_id":  "019c2cb5-4563-747c-8e04-7f8d5840fdd1",
+                          "direction":  "outgoing",
+                          "label":  "UPREGULATES",
+                          "confidence":  0.95,
+                          "neighbor":  {
+                                           "id":  "019c2cb5-4531-7432-a81d-94d17c3c7d35",
+                                           "name":  "CSF Î±-synuclein levels",
+                                           "type":  "Biomarker",
+                                           "relation_count":  0
+                                       },
+                          "evidence_count":  1
+                      },
+                      {
+                          "relation_id":  "019c2cb3-6780-7cc7-9547-c8f2cb65a44a",
+                          "direction":  "outgoing",
+                          "label":  "ASSOCIATED_WITH",
+                          "confidence":  0.8,
+                          "neighbor":  {
+                                           "id":  "019c2cb2-9b2c-707b-9ef7-051275490a0e",
+                                           "name":  "PD",
+                                           "type":  "Disease",
+                                           "relation_count":  0
+                                       },
+                          "evidence_count":  2
+                      },
+                      {
+                          "relation_id":  "019c2cb9-a0d4-7cc1-bd70-a17cfa72ae28",
+                          "direction":  "outgoing",
+                          "label":  "BINDS",
+                          "confidence":  0.85,
+                          "neighbor":  {
+                                           "id":  "019c2cb2-42cb-7f5b-bd6d-18f91f72bc14",
+                                           "name":  "GBA1",
+                                           "type":  "Gene",
+                                           "relation_count":  0
+                                       },
+                          "evidence_count":  1
+                      }
+                  ],
+    "total_relations":  16,
+    "relation_counts_by_label":  {
+                                     "UPREGULATES":  7,
+                                     "DOWNREGULATES":  2,
+                                     "BINDS":  2,
+                                     "ASSOCIATED_WITH":  3,
+                                     "EXPRESSED_IN":  2
+                                 },
+    "neighbor_counts_by_type":  {
+                                    "Protein":  3,
+                                    "Biomarker":  6,
+                                    "Phenotype":  1,
+                                    "Pathway":  1,
+                                    "Tissue/Region":  3,
+                                    "Disease":  1,
+                                    "Gene":  1
+                                }
+}

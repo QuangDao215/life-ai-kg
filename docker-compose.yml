@@ -1,0 +1,72 @@
+# Docker Compose for LIFE AI Knowledge Graph Backend
+# Usage:
+#   Start services:  docker-compose up -d
+#   Stop services:   docker-compose down
+#   Reset data:      docker-compose down -v
+
+services:
+  # ============================================
+  # PostgreSQL - Primary Data Store
+  # ============================================
+  postgres:
+    image: postgres:16-alpine
+    container_name: life-ai-kg-postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-lifeai}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-lifeai_dev_password}
+      POSTGRES_DB: ${POSTGRES_DB:-lifeai_kg}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-lifeai} -d ${POSTGRES_DB:-lifeai_kg}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # ============================================
+  # Redis - Task Queue Backend
+  # ============================================
+  redis:
+    image: redis:7-alpine
+    container_name: life-ai-kg-redis
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+
+  # ============================================
+  # Redis Commander - Optional Redis UI
+  # ============================================
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: life-ai-kg-redis-ui
+    environment:
+      REDIS_HOSTS: local:redis:6379
+    ports:
+      - "${REDIS_COMMANDER_PORT:-8081}:8081"
+    depends_on:
+      - redis
+    profiles:
+      - dev-tools
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  default:
+    name: life-ai-kg-network

@@ -1,0 +1,95 @@
+﻿{
+    "paths":  [
+                  {
+                      "source":  {
+                                     "id":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
+                                     "name":  "ambroxol",
+                                     "type":  "Compound/Drug",
+                                     "relation_count":  0
+                                 },
+                      "target":  {
+                                     "id":  "019c2cb3-bb0c-7ae9-beb3-d3c758994263",
+                                     "name":  "CSF GCase activity",
+                                     "type":  "Biomarker",
+                                     "relation_count":  0
+                                 },
+                      "path_length":  2,
+                      "steps":  [
+                                    {
+                                        "entity":  {
+                                                       "id":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
+                                                       "name":  "ambroxol",
+                                                       "type":  "Compound/Drug",
+                                                       "relation_count":  0
+                                                   },
+                                        "relation":  null,
+                                        "direction":  null,
+                                        "evidence":  [
+
+                                                     ]
+                                    },
+                                    {
+                                        "entity":  {
+                                                       "id":  "019c2cb2-42ea-7c98-bde0-50a6e4563e03",
+                                                       "name":  "cerebrospinal fluid",
+                                                       "type":  "Tissue/Region",
+                                                       "relation_count":  0
+                                                   },
+                                        "relation":  {
+                                                         "id":  "019c2cb3-0712-7015-8de4-fb2bff045a22",
+                                                         "head_id":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
+                                                         "tail_id":  "019c2cb2-42ea-7c98-bde0-50a6e4563e03",
+                                                         "label":  "EXPRESSED_IN",
+                                                         "confidence":  0.9,
+                                                         "created_at":  "2026-02-05T07:27:36.189240Z",
+                                                         "head":  {
+                                                                      "id":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
+                                                                      "name":  "ambroxol",
+                                                                      "type":  "Compound/Drug",
+                                                                      "relation_count":  0
+                                                                  },
+                                                         "tail":  {
+                                                                      "id":  "019c2cb2-42ea-7c98-bde0-50a6e4563e03",
+                                                                      "name":  "cerebrospinal fluid",
+                                                                      "type":  "Tissue/Region",
+                                                                      "relation_count":  0
+                                                                  }
+                                                     },
+                                        "direction":  "forward",
+                                        "evidence":  [
+
+                                                     ]
+                                    },
+                                    {
+                                        "entity":  {
+                                                       "id":  "019c2cb3-bb0c-7ae9-beb3-d3c758994263",
+                                                       "name":  "CSF GCase activity",
+                                                       "type":  "Biomarker",
+                                                       "relation_count":  0
+                                                   },
+                                        "relation":  null,
+                                        "direction":  "backward",
+                                        "evidence":  [
+
+                                                     ]
+                                    }
+                                ],
+                      "total_confidence":  0.81
+                  }
+              ],
+    "source":  {
+                   "id":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
+                   "name":  "ambroxol",
+                   "type":  "Compound/Drug",
+                   "relation_count":  0
+               },
+    "target":  {
+                   "id":  "019c2cb3-bb0c-7ae9-beb3-d3c758994263",
+                   "name":  "CSF GCase activity",
+                   "type":  "Biomarker",
+                   "relation_count":  0
+               },
+    "path_count":  1,
+    "shortest_path_length":  2,
+    "searched_depth":  4
+}

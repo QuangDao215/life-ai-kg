@@ -1,0 +1,14 @@
+﻿{
+    "items":  [
+                  {
+                      "id":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
+                      "name":  "ambroxol",
+                      "type":  "Compound/Drug",
+                      "relation_count":  16
+                  }
+              ],
+    "total":  1,
+    "page":  1,
+    "page_size":  20,
+    "pages":  1
+}
