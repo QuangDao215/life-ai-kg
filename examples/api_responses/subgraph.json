@@ -1,14 +1,14 @@
 ﻿{
     "nodes":  [
                   {
-                      "id":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
-                      "name":  "ambroxol",
+                      "id":  "019c55ea-2034-70f1-aaf8-93bb18cd3adc",
+                      "name":  "Ambroxol hydrochloride",
                       "type":  "Compound/Drug",
                       "depth":  0
                   },
                   {
-                      "id":  "019c2cb2-42d3-783b-9572-16bbb637e6f0",
-                      "name":  "Î²-glucocerebrosidase",
+                      "id":  "019c5293-d289-7d97-acb5-211f062139e1",
+                      "name":  "glucocerebrosidase",
                       "type":  "Protein",
                       "depth":  1
                   },
@@ -19,62 +19,32 @@
                       "depth":  1
                   },
                   {
-                      "id":  "019c2cb2-42da-74c7-9656-c329d8239a30",
-                      "name":  "enzyme activity",
-                      "type":  "Biomarker",
-                      "depth":  1
-                  },
-                  {
-                      "id":  "019c2cb2-42e2-7913-8aa4-1d1af926d03a",
-                      "name":  "Î±-synuclein levels",
-                      "type":  "Biomarker",
-                      "depth":  1
-                  },
-                  {
-                      "id":  "019c2cb2-9b2a-7914-8c92-d17b0a00869f",
-                      "name":  "enzyme activity",
+                      "id":  "019c55ee-f8f6-776e-8d82-05625d090875",
+                      "name":  "cell death",
                       "type":  "Phenotype",
                       "depth":  1
                   },
                   {
-                      "id":  "019c2cb2-42e6-7a9e-ae2e-292b2305a270",
-                      "name":  "pathogenetic pathway",
-                      "type":  "Pathway",
+                      "id":  "019c55ef-2d08-7729-a7f3-39c60f0032f4",
+                      "name":  "ER stress",
+                      "type":  "Phenotype",
                       "depth":  1
                   },
                   {
-                      "id":  "019c2cb2-42ea-7c98-bde0-50a6e4563e03",
-                      "name":  "cerebrospinal fluid",
-                      "type":  "Tissue/Region",
+                      "id":  "019c56ec-0fd2-7b2a-9e9d-a97c06ce94c8",
+                      "name":  "biochemical abnormalities",
+                      "type":  "Phenotype",
                       "depth":  1
                   },
                   {
-                      "id":  "019c2cb2-9b2f-73ec-88aa-5492e8c7b172",
-                      "name":  "CSF",
-                      "type":  "Tissue/Region",
-                      "depth":  1
-                  },
-                  {
-                      "id":  "019c2cb4-264f-7ef8-8588-b47c4adad054",
-                      "name":  "GCase activity",
+                      "id":  "019c56ec-0fe3-7bfe-ac91-f9c83c1a28f4",
+                      "name":  "glucosylceramidase activity",
                       "type":  "Biomarker",
                       "depth":  1
                   },
                   {
-                      "id":  "019c2cb4-2651-7369-bea0-faed94d8ca3d",
-                      "name":  "Î±-synuclein concentration",
-                      "type":  "Biomarker",
-                      "depth":  1
-                  },
-                  {
-                      "id":  "019c2cb4-2653-79c8-ad2a-0e92e7e838aa",
-                      "name":  "GCase protein levels",
-                      "type":  "Biomarker",
-                      "depth":  1
-                  },
-                  {
-                      "id":  "019c2cb5-4531-7432-a81d-94d17c3c7d35",
-                      "name":  "CSF Î±-synuclein levels",
+                      "id":  "019c56ec-1050-729d-a316-2442eb7ccd00",
+                      "name":  "dihydroethidium oxidation rate",
                       "type":  "Biomarker",
                       "depth":  1
                   },
@@ -85,10 +55,34 @@
                       "depth":  1
                   },
                   {
-                      "id":  "019c2cb2-42cb-7f5b-bd6d-18f91f72bc14",
-                      "name":  "GBA1",
-                      "type":  "Gene",
+                      "id":  "019c529c-b4f3-7cc9-88b3-ae7fca172c02",
+                      "name":  "GD",
+                      "type":  "Disease",
                       "depth":  1
+                  },
+                  {
+                      "id":  "019c2cb2-42cd-756b-a97a-e59abbff8ea6",
+                      "name":  "Parkinson disease",
+                      "type":  "Disease",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c56f6-9f8b-715e-828e-ab2d27fb844d",
+                      "name":  "unfolded protein response",
+                      "type":  "Pathway",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c55ed-5393-7629-9b6b-a2da71eb1d09",
+                      "name":  "GBA",
+                      "type":  "Gene",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c2cb2-9b2f-73ec-88aa-5492e8c7b172",
+                      "name":  "CSF",
+                      "type":  "Tissue/Region",
+                      "depth":  2
                   },
                   {
                       "id":  "019c2cb2-42de-7e6f-b123-2c3830cb2430",
@@ -109,181 +103,347 @@
                       "depth":  2
                   },
                   {
-                      "id":  "019c2cb5-4501-7020-9289-37472b972038",
-                      "name":  "CSF GCase protein levels",
-                      "type":  "Biomarker",
-                      "depth":  2
-                  },
-                  {
-                      "id":  "019c2cb2-42cd-756b-a97a-e59abbff8ea6",
-                      "name":  "Parkinson disease",
+                      "id":  "019c529d-84f3-752a-b7d2-ee8ae5121a45",
+                      "name":  "GBA-associated parkinsonism",
                       "type":  "Disease",
                       "depth":  2
                   },
                   {
-                      "id":  "019c2cb3-bb0c-7ae9-beb3-d3c758994263",
-                      "name":  "CSF GCase activity",
+                      "id":  "019c52a1-f680-7469-9ceb-2b5fde3b8ce8",
+                      "name":  "neurons",
+                      "type":  "CellType",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c52a1-f690-7f27-a634-ab458de94283",
+                      "name":  "aSyn",
+                      "type":  "Protein",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c52a1-f697-7b99-8485-6b3bde872aef",
+                      "name":  "aSyn accumulation",
+                      "type":  "Phenotype",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c52a1-f6df-73a3-9a76-f29470b5605e",
+                      "name":  "neurodegenerative disorders",
+                      "type":  "Disease",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c52a1-f6e6-7bbd-a93b-b00a9e6ad947",
+                      "name":  "DLB",
+                      "type":  "Disease",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c52a1-f6be-7e85-9e4d-5b42d9593e19",
+                      "name":  "neurodegeneration",
+                      "type":  "Disease",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c52e5-62b7-7b44-8d7c-4010790e03db",
+                      "name":  "cytosol",
+                      "type":  "Tissue/Region",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c52e5-62bc-7592-8618-a4b6ec686c31",
+                      "name":  "mitochondria",
+                      "type":  "Tissue/Region",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c52e5-62c0-79ec-aaa6-9834f5996e28",
+                      "name":  "mitochondrial complex I",
+                      "type":  "Protein",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c55fe-de46-7d43-aee8-9107cba5ccf9",
+                      "name":  "lysosome",
+                      "type":  "Tissue/Region",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c5298-3d57-70c9-ae66-42ef99475100",
+                      "name":  "PD",
+                      "type":  "Disease",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c5617-419c-7403-a37d-b15fff94e61e",
+                      "name":  "dopaminergic cells",
+                      "type":  "CellType",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c5604-23bb-7a49-9a10-db0af7d92544",
+                      "name":  "fibroblasts",
+                      "type":  "CellType",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c5621-1611-7179-8cfc-d0a4070b2293",
+                      "name":  "A-SYN",
+                      "type":  "Protein",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c562a-2170-72b0-b228-1059c1843ec6",
+                      "name":  "GCase lysosomal translocation",
                       "type":  "Biomarker",
                       "depth":  2
                   },
                   {
-                      "id":  "019c2cb2-9b31-775b-9fa6-b40ea0106a5d",
-                      "name":  "GBA1 mutations",
+                      "id":  "019c562a-b5bd-7871-aa52-96a52c2117d4",
+                      "name":  "protein-misfolding diseases",
+                      "type":  "Disease",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c5600-4442-7d56-8096-7137fcba7448",
+                      "name":  "lysosomal enzyme",
+                      "type":  "Protein",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c5293-d2c3-7beb-94d3-2f206f95303a",
+                      "name":  "endoplasmic reticulum stress",
+                      "type":  "Pathway",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c5293-d2db-7d28-877d-5d7c2683a1ea",
+                      "name":  "autophagy-lysosomal pathway",
+                      "type":  "Pathway",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c56f6-9fc7-7202-9fb1-6369e104324a",
+                      "name":  "neurodegenerative changes",
                       "type":  "Phenotype",
                       "depth":  2
                   },
                   {
-                      "id":  "019c2cb4-e424-72c1-916b-2538cac8bb61",
-                      "name":  "Commander gene family",
-                      "type":  "Gene",
+                      "id":  "019c560b-a370-7846-aed7-8c2c7039cd81",
+                      "name":  "protein levels",
+                      "type":  "Biomarker",
                       "depth":  2
                   },
                   {
-                      "id":  "019c2cb4-e432-7515-835d-06b36c0be832",
-                      "name":  "COMMD genes",
-                      "type":  "Gene",
+                      "id":  "019c5702-38ba-7d0f-bb98-47795e964d94",
+                      "name":  "activity",
+                      "type":  "Biomarker",
                       "depth":  2
                   },
                   {
-                      "id":  "019c2cb5-4519-72c7-aa32-3247e6e94198",
-                      "name":  "mutations",
+                      "id":  "019c577a-5c9f-78cb-a3ed-60c0371a8205",
+                      "name":  "primary cultures",
+                      "type":  "CellType",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c577a-5ca5-7d97-9773-daf8e4c03ef1",
+                      "name":  "human iPS neurons",
+                      "type":  "CellType",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c577a-5caa-7ecb-a33d-55e027d1773b",
+                      "name":  "lysosomal protein degradation",
+                      "type":  "Pathway",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c577a-5cbc-71f1-a2f4-4b2a381a858b",
+                      "name":  "neurotoxicity",
                       "type":  "Phenotype",
                       "depth":  2
                   },
                   {
-                      "id":  "019c2cb9-a0cb-7eac-bd63-7aa1bcf6fb3d",
-                      "name":  "Venglustat",
+                      "id":  "019c577b-0a7c-7d47-b125-37f6a9183789",
+                      "name":  "glycosphingolipid homeostasis",
+                      "type":  "Phenotype",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c577b-abf7-70ad-a983-4ede7d1165b0",
+                      "name":  "endoplasmic reticulum (ER)",
+                      "type":  "Tissue/Region",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c577b-abf9-7649-9ea4-87cde15cb846",
+                      "name":  "unfolded protein response (UPR)",
+                      "type":  "Pathway",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c5297-d516-7b7a-a270-8e4eef4ad8d8",
+                      "name":  "glucosylceramide",
                       "type":  "Compound/Drug",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c529c-b4aa-7d9f-8f05-a498a30d01a5",
+                      "name":  "glucosylsphingosine",
+                      "type":  "Compound/Drug",
+                      "depth":  2
+                  },
+                  {
+                      "id":  "019c577d-c572-7dd8-bb6e-812ad853d542",
+                      "name":  "toxicity",
+                      "type":  "Phenotype",
                       "depth":  2
                   }
               ],
     "edges":  [
                   {
-                      "id":  "019c2cb2-4318-7e72-a537-568eff89021e",
-                      "source":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
-                      "target":  "019c2cb2-42d3-783b-9572-16bbb637e6f0",
-                      "label":  "UPREGULATES",
-                      "confidence":  0.95,
+                      "id":  "019c55ea-20c1-779c-8da3-b3e884c456f2",
+                      "source":  "019c55ea-2034-70f1-aaf8-93bb18cd3adc",
+                      "target":  "019c5293-d289-7d97-acb5-211f062139e1",
+                      "label":  "ACTIVATES",
+                      "confidence":  0.9,
                       "evidence_count":  1
                   },
                   {
-                      "id":  "019c2cb2-4320-76bb-a20d-8f8db0fa730b",
-                      "source":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
+                      "id":  "019c55ee-f90f-718f-ad9f-3fbcf2a1810d",
+                      "source":  "019c55ea-2034-70f1-aaf8-93bb18cd3adc",
                       "target":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "label":  "INHIBITS",
+                      "confidence":  0.8,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c55ee-f914-7b2c-bc78-5fade78a5f44",
+                      "source":  "019c55ea-2034-70f1-aaf8-93bb18cd3adc",
+                      "target":  "019c55ee-f8f6-776e-8d82-05625d090875",
+                      "label":  "INHIBITS",
+                      "confidence":  0.75,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c55ef-2d0b-7929-8a4a-7986f4af2b97",
+                      "source":  "019c55ea-2034-70f1-aaf8-93bb18cd3adc",
+                      "target":  "019c55ef-2d08-7729-a7f3-39c60f0032f4",
+                      "label":  "DOWNREGULATES",
+                      "confidence":  0.95,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c56ec-10a0-74a9-b175-465ebe479255",
+                      "source":  "019c55ea-2034-70f1-aaf8-93bb18cd3adc",
+                      "target":  "019c56ec-0fd2-7b2a-9e9d-a97c06ce94c8",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c56ec-10a7-7c2c-9755-45791ac6fab0",
+                      "source":  "019c55ea-2034-70f1-aaf8-93bb18cd3adc",
+                      "target":  "019c56ec-0fe3-7bfe-ac91-f9c83c1a28f4",
                       "label":  "UPREGULATES",
                       "confidence":  0.95,
                       "evidence_count":  1
                   },
                   {
-                      "id":  "019c2cb2-4326-7064-a6f7-eebbe20370e4",
-                      "source":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
-                      "target":  "019c2cb2-42da-74c7-9656-c329d8239a30",
-                      "label":  "UPREGULATES",
-                      "confidence":  0.95,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb2-432d-73a5-86ed-bcbb1348772d",
-                      "source":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
-                      "target":  "019c2cb2-42e2-7913-8aa4-1d1af926d03a",
+                      "id":  "019c56ec-10d9-70a9-a666-d97f03f1d84c",
+                      "source":  "019c55ea-2034-70f1-aaf8-93bb18cd3adc",
+                      "target":  "019c56ec-1050-729d-a316-2442eb7ccd00",
                       "label":  "DOWNREGULATES",
                       "confidence":  0.95,
                       "evidence_count":  2
                   },
                   {
-                      "id":  "019c2cb2-9b32-7cff-a1d9-4b9d2b461f75",
-                      "source":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
-                      "target":  "019c2cb2-9b2a-7914-8c92-d17b0a00869f",
-                      "label":  "UPREGULATES",
-                      "confidence":  0.95,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb2-9b52-750a-a636-49dea77b94f4",
-                      "source":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
-                      "target":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
-                      "label":  "BINDS",
-                      "confidence":  0.85,
-                      "evidence_count":  2
-                  },
-                  {
-                      "id":  "019c2cb2-4334-7978-8c51-a1ef84ac8d57",
-                      "source":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
-                      "target":  "019c2cb2-42e6-7a9e-ae2e-292b2305a270",
-                      "label":  "ASSOCIATED_WITH",
-                      "confidence":  0.9,
-                      "evidence_count":  3
-                  },
-                  {
-                      "id":  "019c2cb3-0712-7015-8de4-fb2bff045a22",
-                      "source":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
-                      "target":  "019c2cb2-42ea-7c98-bde0-50a6e4563e03",
-                      "label":  "EXPRESSED_IN",
-                      "confidence":  0.9,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb2-4342-77c3-9459-cfa5172c4ebe",
-                      "source":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
-                      "target":  "019c2cb2-42ea-7c98-bde0-50a6e4563e03",
-                      "label":  "ASSOCIATED_WITH",
-                      "confidence":  0.95,
-                      "evidence_count":  3
-                  },
-                  {
-                      "id":  "019c2cb2-9b4e-7559-8dc8-fbde0b275812",
-                      "source":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
-                      "target":  "019c2cb2-9b2f-73ec-88aa-5492e8c7b172",
-                      "label":  "EXPRESSED_IN",
-                      "confidence":  0.95,
-                      "evidence_count":  3
-                  },
-                  {
-                      "id":  "019c2cb4-265f-7f0d-859f-9b82d309113f",
-                      "source":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
-                      "target":  "019c2cb4-264f-7ef8-8588-b47c4adad054",
-                      "label":  "DOWNREGULATES",
-                      "confidence":  0.85,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb4-2668-7afa-823b-1e8664a185ec",
-                      "source":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
-                      "target":  "019c2cb4-2651-7369-bea0-faed94d8ca3d",
-                      "label":  "UPREGULATES",
-                      "confidence":  0.85,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb4-2673-73d9-af93-8071a7acdc19",
-                      "source":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
-                      "target":  "019c2cb4-2653-79c8-ad2a-0e92e7e838aa",
-                      "label":  "UPREGULATES",
-                      "confidence":  0.85,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb5-4563-747c-8e04-7f8d5840fdd1",
-                      "source":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
-                      "target":  "019c2cb5-4531-7432-a81d-94d17c3c7d35",
-                      "label":  "UPREGULATES",
-                      "confidence":  0.95,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb3-6780-7cc7-9547-c8f2cb65a44a",
-                      "source":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
+                      "id":  "019c56ec-111a-7c80-b19c-3a373dc113de",
+                      "source":  "019c55ea-2034-70f1-aaf8-93bb18cd3adc",
                       "target":  "019c2cb2-9b2c-707b-9ef7-051275490a0e",
                       "label":  "ASSOCIATED_WITH",
-                      "confidence":  0.8,
+                      "confidence":  0.85,
                       "evidence_count":  2
                   },
                   {
-                      "id":  "019c2cb9-a0d4-7cc1-bd70-a17cfa72ae28",
-                      "source":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
-                      "target":  "019c2cb2-42cb-7f5b-bd6d-18f91f72bc14",
-                      "label":  "BINDS",
+                      "id":  "019c5791-b3d4-7cb7-821c-704497ce2f6e",
+                      "source":  "019c55ea-2034-70f1-aaf8-93bb18cd3adc",
+                      "target":  "019c56ec-0fd2-7b2a-9e9d-a97c06ce94c8",
+                      "label":  "DOWNREGULATES",
+                      "confidence":  0.8,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c5792-779d-7e4e-a731-5d60604456c4",
+                      "source":  "019c55ea-2034-70f1-aaf8-93bb18cd3adc",
+                      "target":  "019c529c-b4f3-7cc9-88b3-ae7fca172c02",
+                      "label":  "ASSOCIATED_WITH",
                       "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c5793-189c-7d26-9c9a-64f62b665fb8",
+                      "source":  "019c55ea-2034-70f1-aaf8-93bb18cd3adc",
+                      "target":  "019c56ec-0fd2-7b2a-9e9d-a97c06ce94c8",
+                      "label":  "DECREASES_RISK",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c5793-18c9-7646-b4a9-81b21b10f5a9",
+                      "source":  "019c55ea-2034-70f1-aaf8-93bb18cd3adc",
+                      "target":  "019c529c-b4f3-7cc9-88b3-ae7fca172c02",
+                      "label":  "DECREASES_RISK",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c5793-18d3-76d4-8a77-8853e4289447",
+                      "source":  "019c55ea-2034-70f1-aaf8-93bb18cd3adc",
+                      "target":  "019c2cb2-9b2c-707b-9ef7-051275490a0e",
+                      "label":  "DECREASES_RISK",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c57a8-e6b6-7fd6-90e5-86889bc104b7",
+                      "source":  "019c55ef-2d08-7729-a7f3-39c60f0032f4",
+                      "target":  "019c2cb2-42cd-756b-a97a-e59abbff8ea6",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c57b1-a6e2-7c26-982d-9eb60d8fee70",
+                      "source":  "019c55ef-2d08-7729-a7f3-39c60f0032f4",
+                      "target":  "019c2cb2-9b2c-707b-9ef7-051275490a0e",
+                      "label":  "INCREASES_RISK",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c55ef-2d0f-72b6-935c-a5ba693a79bb",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c55ef-2d08-7729-a7f3-39c60f0032f4",
+                      "label":  "UPREGULATES",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c57a8-e6d2-77a1-b3ea-afe4dc2d4943",
+                      "source":  "019c56f6-9f8b-715e-828e-ab2d27fb844d",
+                      "target":  "019c55ef-2d08-7729-a7f3-39c60f0032f4",
+                      "label":  "ACTIVATES",
+                      "confidence":  0.95,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c57b1-a6d3-74c7-970d-90b14184076c",
+                      "source":  "019c55ed-5393-7629-9b6b-a2da71eb1d09",
+                      "target":  "019c55ef-2d08-7729-a7f3-39c60f0032f4",
+                      "label":  "INCREASES_RISK",
+                      "confidence":  0.95,
                       "evidence_count":  1
                   },
                   {
@@ -291,8 +451,8 @@
                       "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
                       "target":  "019c2cb2-9b2c-707b-9ef7-051275490a0e",
                       "label":  "ASSOCIATED_WITH",
-                      "confidence":  0.85,
-                      "evidence_count":  1
+                      "confidence":  0.95,
+                      "evidence_count":  6
                   },
                   {
                       "id":  "019c2cb5-454d-7289-83f8-512d5e029d0c",
@@ -308,23 +468,23 @@
                       "target":  "019c2cb2-42de-7e6f-b123-2c3830cb2430",
                       "label":  "ASSOCIATED_WITH",
                       "confidence":  0.9,
-                      "evidence_count":  1
+                      "evidence_count":  2
                   },
                   {
                       "id":  "019c2cb6-1414-71c3-bd7e-5c0a32751bef",
                       "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
                       "target":  "019c2cb2-9b2c-707b-9ef7-051275490a0e",
                       "label":  "INCREASES_RISK",
-                      "confidence":  0.85,
-                      "evidence_count":  1
+                      "confidence":  0.95,
+                      "evidence_count":  3
                   },
                   {
                       "id":  "019c2cb6-141a-70ae-8b14-4b4eef4e76ee",
                       "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
                       "target":  "019c2cb6-1408-7a0e-a37e-e19d75267320",
                       "label":  "INCREASES_RISK",
-                      "confidence":  0.85,
-                      "evidence_count":  1
+                      "confidence":  0.9,
+                      "evidence_count":  2
                   },
                   {
                       "id":  "019c2cb6-141e-7995-b9fb-6fe83c05c9bd",
@@ -340,7 +500,7 @@
                       "target":  "019c2cb2-9b2c-707b-9ef7-051275490a0e",
                       "label":  "DECREASES_RISK",
                       "confidence":  0.9,
-                      "evidence_count":  1
+                      "evidence_count":  2
                   },
                   {
                       "id":  "019c2cb6-1424-7a08-a1b4-ebcff6a386b0",
@@ -348,23 +508,591 @@
                       "target":  "019c2cb6-1408-7a0e-a37e-e19d75267320",
                       "label":  "DECREASES_RISK",
                       "confidence":  0.9,
+                      "evidence_count":  2
+                  },
+                  {
+                      "id":  "019c529d-8516-7ecc-af1a-529aad6e250d",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c529d-84f3-752a-b7d2-ee8ae5121a45",
+                      "label":  "INCREASES_RISK",
+                      "confidence":  0.9,
                       "evidence_count":  1
                   },
                   {
-                      "id":  "019c2cb2-9b3b-7db2-864a-49052e98bbed",
-                      "source":  "019c2cb2-42d3-783b-9572-16bbb637e6f0",
-                      "target":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "id":  "019c52a1-f713-77e3-a81a-00e9164df20c",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c52a1-f680-7469-9ceb-2b5fde3b8ce8",
+                      "label":  "EXPRESSED_IN",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c52a1-f722-71ac-978b-bffced4a3692",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c52a1-f690-7f27-a634-ab458de94283",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.95,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c52a1-f733-7470-b09e-380462424232",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c52a1-f697-7b99-8485-6b3bde872aef",
+                      "label":  "INCREASES_RISK",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c52a1-f76d-72f7-8413-3a9fab39c171",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c52a1-f6df-73a3-9a76-f29470b5605e",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c52a1-f77d-7a33-806a-3c5d8fbbe2e8",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c52a1-f6e6-7bbd-a93b-b00a9e6ad947",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c52e5-633b-7c37-90fb-b4546eb33c67",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c52a1-f6be-7e85-9e4d-5b42d9593e19",
                       "label":  "ASSOCIATED_WITH",
                       "confidence":  0.9,
                       "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c52e5-6346-75a6-bde7-4fe9f99148c1",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c52e5-62b7-7b44-8d7c-4010790e03db",
+                      "label":  "EXPRESSED_IN",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c52e5-6350-7497-b113-df2fb98acd2a",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c52e5-62bc-7592-8618-a4b6ec686c31",
+                      "label":  "EXPRESSED_IN",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c52e5-6359-7c1a-a108-5f5d70cf9649",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c52e5-62c0-79ec-aaa6-9834f5996e28",
+                      "label":  "ACTIVATES",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c55fe-df23-7c88-af9a-311cacb45d9a",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c55fe-de46-7d43-aee8-9107cba5ccf9",
+                      "label":  "EXPRESSED_IN",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c560d-a45a-7639-bbbe-e3a6067d7f03",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5298-3d57-70c9-ae66-42ef99475100",
+                      "label":  "INCREASES_RISK",
+                      "confidence":  0.95,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c5617-41fb-7741-8251-3628f7ddf848",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5617-419c-7403-a37d-b15fff94e61e",
+                      "label":  "EXPRESSED_IN",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c5618-2450-787b-94a2-19ca7b37a019",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5604-23bb-7a49-9a10-db0af7d92544",
+                      "label":  "EXPRESSED_IN",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c5621-16c4-7fc0-8870-fcf0bdc9118a",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5621-1611-7179-8cfc-d0a4070b2293",
+                      "label":  "BINDS",
+                      "confidence":  0.95,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c5621-16d2-77e5-b2fd-12f7ef451ac2",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5298-3d57-70c9-ae66-42ef99475100",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.8,
+                      "evidence_count":  2
+                  },
+                  {
+                      "id":  "019c562a-2200-795a-81b7-322f7929be36",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c562a-2170-72b0-b228-1059c1843ec6",
+                      "label":  "PART_OF",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c562a-b5f3-7540-a51b-f8f61ab5eada",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c562a-b5bd-7871-aa52-96a52c2117d4",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c56d2-6d25-7657-b9b4-7df1c7242ce6",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5600-4442-7d56-8096-7137fcba7448",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.95,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c56e7-915f-74cc-a142-3d924ee5a26c",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c2cb2-42de-7e6f-b123-2c3830cb2430",
+                      "label":  "DOWNREGULATES",
+                      "confidence":  0.95,
+                      "evidence_count":  4
+                  },
+                  {
+                      "id":  "019c56f6-a03c-7e35-a306-7c99528c2354",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5293-d2c3-7beb-94d3-2f206f95303a",
+                      "label":  "ACTIVATES",
+                      "confidence":  0.95,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c56f6-a047-7b89-8e64-3d1cc7264167",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c56f6-9f8b-715e-828e-ab2d27fb844d",
+                      "label":  "ACTIVATES",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c56f6-a058-7b81-b546-fe8421004b2b",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5293-d2db-7d28-877d-5d7c2683a1ea",
+                      "label":  "INHIBITS",
+                      "confidence":  0.95,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c56f6-a06e-7b19-b162-0b27ce44d528",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c2cb2-42de-7e6f-b123-2c3830cb2430",
+                      "label":  "UPREGULATES",
+                      "confidence":  0.9,
+                      "evidence_count":  2
+                  },
+                  {
+                      "id":  "019c56f6-a083-74ce-847c-80523e5c8895",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c56f6-9fc7-7202-9fb1-6369e104324a",
+                      "label":  "INCREASES_RISK",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c5702-39b7-70f8-ba52-ba53ea40dd51",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c560b-a370-7846-aed7-8c2c7039cd81",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c5702-39cf-7e19-96fe-e05d0b96a11f",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5702-38ba-7d0f-bb98-47795e964d94",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c577a-5ce4-792d-930d-5bd55504cafa",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c577a-5c9f-78cb-a3ed-60c0371a8205",
+                      "label":  "EXPRESSED_IN",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c577a-5cec-760a-89a2-20820434c66e",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c577a-5ca5-7d97-9773-daf8e4c03ef1",
+                      "label":  "EXPRESSED_IN",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c577a-5cf4-79d0-9d1e-243dd1088982",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c577a-5caa-7ecb-a33d-55e027d1773b",
+                      "label":  "PART_OF",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c577a-5d04-70e3-8802-d9d7c47ba185",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c577a-5cbc-71f1-a2f4-4b2a381a858b",
+                      "label":  "DECREASES_RISK",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c577b-0acc-767e-816e-05f33df20bb7",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c577b-0a7c-7d47-b125-37f6a9183789",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c577b-ac65-7c16-be6e-c20fdcf81051",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c577b-abf7-70ad-a983-4ede7d1165b0",
+                      "label":  "EXPRESSED_IN",
+                      "confidence":  0.8,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c577b-ac6c-7d32-9899-ebc266e605c9",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c577b-abf9-7649-9ea4-87cde15cb846",
+                      "label":  "ACTIVATES",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c577d-c5b6-7f24-926b-68de943fd691",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5297-d516-7b7a-a270-8e4eef4ad8d8",
+                      "label":  "BINDS",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c577d-c5be-7ca0-b628-d4be5f744528",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c529c-b4aa-7d9f-8f05-a498a30d01a5",
+                      "label":  "BINDS",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c577d-c5c5-7ef4-bc88-611692bca9cc",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c577d-c572-7dd8-bb6e-812ad853d542",
+                      "label":  "DECREASES_RISK",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c577d-c5cd-729e-b025-8d0e7c88470f",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5299-deda-77d6-a8a6-2796cd9fa228",
+                      "label":  "DECREASES_RISK",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c577d-c5d4-7e70-b8b8-088a765fdb03",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c577d-c57e-7bd6-98a0-49b4aaf0f676",
+                      "label":  "DECREASES_RISK",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c577d-c5dc-7b59-afb1-05429381566e",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c577d-c581-7665-a434-abea5550ef81",
+                      "label":  "DECREASES_RISK",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c577d-c5e4-7703-8496-19a8ddcd17cf",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c577d-c585-7204-87ed-f11e2a4022b4",
+                      "label":  "UPREGULATES",
+                      "confidence":  0.8,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c577d-c5ec-7de7-97a0-f4ec9bc34a50",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c577d-c589-785b-b466-d7c6d15ee98b",
+                      "label":  "DECREASES_RISK",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c577d-c5f4-76aa-a8ab-007bfe8495ef",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c529f-3cc4-7428-b3f2-4afdc52e9a0c",
+                      "label":  "DECREASES_RISK",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c5780-bd50-7f1d-8220-31c54b4563fd",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c560f-b2a4-7092-bfd0-08afa30a275a",
+                      "label":  "INCREASES_RISK",
+                      "confidence":  0.95,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c5780-bd5a-7b54-9235-61f627b8cb14",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5780-bd23-7415-9f4d-04ffb6b030cb",
+                      "label":  "INHIBITS",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c5781-82b3-7974-aae2-b66de106b1ac",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5781-8229-7ff6-b4ec-72d81d45b997",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c5782-2736-7429-9ba6-88bfcbc02978",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c529c-b4f3-7cc9-88b3-ae7fca172c02",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.95,
+                      "evidence_count":  2
+                  },
+                  {
+                      "id":  "019c5782-d617-721b-ad7c-edc20ebe942e",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5782-d5af-7229-9349-8ec0e2c1995d",
+                      "label":  "PART_OF",
+                      "confidence":  0.95,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c5782-d61e-7ece-b840-c7094604795c",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c562a-2146-7782-9422-5f375ae76b0f",
+                      "label":  "PART_OF",
+                      "confidence":  0.95,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c5787-4dba-7503-97d6-ce35fc2f87bb",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5786-70e1-7344-bdc4-1dbbbbf41416",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c5788-8589-7290-9851-2f504f70e73b",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c577b-abed-78c6-afe1-2c142282df3b",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c5796-6502-7267-9622-ffa306906a80",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5796-646f-7f26-8274-0c1812cb42b7",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.95,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c5796-6553-7427-baee-266bfa31d59f",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c529f-3cc4-7428-b3f2-4afdc52e9a0c",
+                      "label":  "INCREASES_RISK",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c579e-78bf-7f73-88c7-53ba913200ef",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c579e-77f4-7214-846f-2cf624228832",
+                      "label":  "DOWNREGULATES",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c579e-78ca-787f-8039-b8da16d6cfc9",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c55ea-73c7-740b-98c5-7688f1d701b1",
+                      "label":  "UPREGULATES",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c579f-2224-79dc-871f-2bd0e7d7735c",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5298-3dce-78fc-8d0b-2403c6630048",
+                      "label":  "UPREGULATES",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c579f-2237-705f-9c16-3c2b83a7b7bc",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c579f-21e4-72ee-80ee-b98b66344ab5",
+                      "label":  "UPREGULATES",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c579f-22ac-71af-8bc3-30c5b556a4a1",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c55f8-9e26-71cf-86ec-e5f61d4fe61b",
+                      "label":  "DECREASES_RISK",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c57a4-f93f-70bf-94cd-399e68235252",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c2cb6-1403-73d0-bcf6-4264df2dc156",
+                      "label":  "PART_OF",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c57a5-9456-7ae0-81ef-6ecb06e9aa2b",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c57a4-6a94-7302-a4a6-c958cf9fa137",
+                      "label":  "EXPRESSED_IN",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c57aa-ec8d-77be-89c7-a3dee30bf77e",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c55ea-73c7-740b-98c5-7688f1d701b1",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c57b1-a6bb-7e18-ab4a-fcc2c518acf4",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5297-d50f-7501-9cb2-9d0e1b2939c2",
+                      "label":  "EXPRESSED_IN",
+                      "confidence":  0.85,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c57a4-6acf-7d38-97fe-d5b745bd9902",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5600-4442-7d56-8096-7137fcba7448",
+                      "label":  "PART_OF",
+                      "confidence":  0.95,
+                      "evidence_count":  2
+                  },
+                  {
+                      "id":  "019c5788-8576-71e5-a02c-710341a2e63d",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5612-6fa2-74be-9f85-330966644010",
+                      "label":  "PART_OF",
+                      "confidence":  0.95,
+                      "evidence_count":  2
+                  },
+                  {
+                      "id":  "019c57b6-d767-7f86-a03e-6ea8a579c57e",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c57a4-f92b-7386-90fd-974ceb485790",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c57b7-8814-764f-9c4c-d3e6677ea5d3",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c529e-cf34-7518-9842-f308e4214e59",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c57b9-e92c-707c-b00f-46bdf180cbb4",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c57b9-e8e2-7dec-899c-5089b641d222",
+                      "label":  "EXPRESSED_IN",
+                      "confidence":  0.75,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c57b9-e94c-7ccb-97c9-a343549c3c88",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5618-242d-7da4-93ba-3defda516884",
+                      "label":  "ACTIVATES",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c57d6-77a9-7bda-9062-436f9414df2c",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c579a-ff02-737d-b4c8-9004c61fdd63",
+                      "label":  "EXPRESSED_IN",
+                      "confidence":  0.8,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c57d7-202e-7c78-90ba-67308cd0d2bf",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c5600-446f-7091-a058-180ee181e105",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.9,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c57d7-20b6-71b4-974c-5423ed9ef8ac",
+                      "source":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "target":  "019c2cb2-42cd-756b-a97a-e59abbff8ea6",
+                      "label":  "ASSOCIATED_WITH",
+                      "confidence":  0.8,
+                      "evidence_count":  1
+                  },
+                  {
+                      "id":  "019c2cb2-4320-76bb-a20d-8f8db0fa730b",
+                      "source":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
+                      "target":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
+                      "label":  "UPREGULATES",
+                      "confidence":  0.95,
+                      "evidence_count":  5
                   },
                   {
                       "id":  "019c2cb3-0733-77c1-a6e3-70b63842ca2f",
                       "source":  "019c2cb2-42cb-7f5b-bd6d-18f91f72bc14",
                       "target":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
                       "label":  "ASSOCIATED_WITH",
-                      "confidence":  0.85,
-                      "evidence_count":  1
+                      "confidence":  0.99,
+                      "evidence_count":  9
                   },
                   {
                       "id":  "019c2cb5-453d-7263-8166-ca26472321d2",
@@ -373,178 +1101,37 @@
                       "label":  "BIOMARKER_FOR",
                       "confidence":  0.9,
                       "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb6-140a-76aa-9d79-4242161b7088",
-                      "source":  "019c2cb2-42de-7e6f-b123-2c3830cb2430",
-                      "target":  "019c2cb2-42d6-7427-aa0e-fac6a6278ee5",
-                      "label":  "ASSOCIATED_WITH",
-                      "confidence":  0.9,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb2-433b-7856-bc84-1b9ea4aa5c08",
-                      "source":  "019c2cb2-42e6-7a9e-ae2e-292b2305a270",
-                      "target":  "019c2cb2-42cd-756b-a97a-e59abbff8ea6",
-                      "label":  "PART_OF",
-                      "confidence":  0.9,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb2-9b46-7a14-ba2a-62947d0998c6",
-                      "source":  "019c2cb2-42e6-7a9e-ae2e-292b2305a270",
-                      "target":  "019c2cb2-9b2c-707b-9ef7-051275490a0e",
-                      "label":  "PART_OF",
-                      "confidence":  0.9,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb3-070a-72aa-954a-67807800d995",
-                      "source":  "019c2cb2-42e6-7a9e-ae2e-292b2305a270",
-                      "target":  "019c2cb2-9b2c-707b-9ef7-051275490a0e",
-                      "label":  "ASSOCIATED_WITH",
-                      "confidence":  0.95,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb2-9b4a-731e-ad89-76edaef58ddc",
-                      "source":  "019c2cb2-42ea-7c98-bde0-50a6e4563e03",
-                      "target":  "019c2cb2-9b2f-73ec-88aa-5492e8c7b172",
-                      "label":  "ASSOCIATED_WITH",
-                      "confidence":  0.9,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb3-bb24-70eb-bcbe-d159466bf2fe",
-                      "source":  "019c2cb3-bb0c-7ae9-beb3-d3c758994263",
-                      "target":  "019c2cb2-42ea-7c98-bde0-50a6e4563e03",
-                      "label":  "PART_OF",
-                      "confidence":  0.9,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb4-2664-7889-8a55-e2a6deb7f868",
-                      "source":  "019c2cb4-2651-7369-bea0-faed94d8ca3d",
-                      "target":  "019c2cb2-9b2f-73ec-88aa-5492e8c7b172",
-                      "label":  "EXPRESSED_IN",
-                      "confidence":  0.95,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb2-9b57-764d-88e8-4de1f087ebfb",
-                      "source":  "019c2cb2-9b31-775b-9fa6-b40ea0106a5d",
-                      "target":  "019c2cb2-9b2c-707b-9ef7-051275490a0e",
-                      "label":  "ASSOCIATED_WITH",
-                      "confidence":  0.75,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb4-e43c-7481-99d6-c3367b1f547f",
-                      "source":  "019c2cb4-e424-72c1-916b-2538cac8bb61",
-                      "target":  "019c2cb2-9b2c-707b-9ef7-051275490a0e",
-                      "label":  "INCREASES_RISK",
-                      "confidence":  0.95,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb4-e445-718a-9cde-7f93b4f47fa9",
-                      "source":  "019c2cb4-e432-7515-835d-06b36c0be832",
-                      "target":  "019c2cb2-9b2c-707b-9ef7-051275490a0e",
-                      "label":  "ASSOCIATED_WITH",
-                      "confidence":  0.8,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb6-1411-706d-ab82-a169a672c3e7",
-                      "source":  "019c2cb2-42de-7e6f-b123-2c3830cb2430",
-                      "target":  "019c2cb2-9b2c-707b-9ef7-051275490a0e",
-                      "label":  "INCREASES_RISK",
-                      "confidence":  0.85,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb3-072c-7b00-b0c7-88f3b2b00216",
-                      "source":  "019c2cb2-42cb-7f5b-bd6d-18f91f72bc14",
-                      "target":  "019c2cb2-9b2c-707b-9ef7-051275490a0e",
-                      "label":  "ASSOCIATED_WITH",
-                      "confidence":  0.95,
-                      "evidence_count":  2
-                  },
-                  {
-                      "id":  "019c2cb4-266e-72fd-87f1-ac76284c9542",
-                      "source":  "019c2cb4-2653-79c8-ad2a-0e92e7e838aa",
-                      "target":  "019c2cb2-9b2f-73ec-88aa-5492e8c7b172",
-                      "label":  "EXPRESSED_IN",
-                      "confidence":  0.95,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb2-430c-78cf-8425-aefcae1f43fb",
-                      "source":  "019c2cb2-42cb-7f5b-bd6d-18f91f72bc14",
-                      "target":  "019c2cb2-42cd-756b-a97a-e59abbff8ea6",
-                      "label":  "INCREASES_RISK",
-                      "confidence":  0.95,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb5-4554-75d7-b8a9-5afae963de6c",
-                      "source":  "019c2cb5-4519-72c7-aa32-3247e6e94198",
-                      "target":  "019c2cb2-42cb-7f5b-bd6d-18f91f72bc14",
-                      "label":  "ASSOCIATED_WITH",
-                      "confidence":  0.9,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb9-a0d8-7359-9b70-6b8bc8878485",
-                      "source":  "019c2cb9-a0cb-7eac-bd63-7aa1bcf6fb3d",
-                      "target":  "019c2cb2-42cb-7f5b-bd6d-18f91f72bc14",
-                      "label":  "DOWNREGULATES",
-                      "confidence":  0.8,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb4-265a-73b4-847b-73c36559ea4d",
-                      "source":  "019c2cb4-264f-7ef8-8588-b47c4adad054",
-                      "target":  "019c2cb2-9b2f-73ec-88aa-5492e8c7b172",
-                      "label":  "EXPRESSED_IN",
-                      "confidence":  0.95,
-                      "evidence_count":  1
-                  },
-                  {
-                      "id":  "019c2cb5-4545-75b2-862c-7059dcbe4ec6",
-                      "source":  "019c2cb2-42de-7e6f-b123-2c3830cb2430",
-                      "target":  "019c2cb2-9b2f-73ec-88aa-5492e8c7b172",
-                      "label":  "EXPRESSED_IN",
-                      "confidence":  0.85,
-                      "evidence_count":  1
                   }
               ],
-    "center_node":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
+    "center_node":  "019c55ea-2034-70f1-aaf8-93bb18cd3adc",
     "depth":  2,
-    "truncated":  false,
+    "truncated":  true,
     "stats":  {
-                  "node_count":  26,
-                  "edge_count":  45,
+                  "node_count":  50,
+                  "edge_count":  100,
                   "nodes_by_type":  {
-                                        "Compound/Drug":  2,
-                                        "Protein":  3,
-                                        "Biomarker":  8,
-                                        "Phenotype":  3,
-                                        "Pathway":  2,
-                                        "Tissue/Region":  2,
-                                        "Disease":  3,
-                                        "Gene":  3
+                                        "Compound/Drug":  3,
+                                        "Protein":  7,
+                                        "Phenotype":  8,
+                                        "Biomarker":  5,
+                                        "Disease":  10,
+                                        "Pathway":  6,
+                                        "Gene":  1,
+                                        "Tissue/Region":  5,
+                                        "CellType":  5
                                     },
                   "edges_by_label":  {
-                                         "UPREGULATES":  7,
-                                         "DOWNREGULATES":  3,
-                                         "BINDS":  2,
-                                         "ASSOCIATED_WITH":  14,
-                                         "EXPRESSED_IN":  8,
-                                         "INCREASES_RISK":  5,
-                                         "DECREASES_RISK":  2,
-                                         "BIOMARKER_FOR":  1,
-                                         "PART_OF":  3
+                                         "ACTIVATES":  7,
+                                         "INHIBITS":  4,
+                                         "DOWNREGULATES":  5,
+                                         "ASSOCIATED_WITH":  27,
+                                         "UPREGULATES":  8,
+                                         "DECREASES_RISK":  13,
+                                         "INCREASES_RISK":  10,
+                                         "EXPRESSED_IN":  15,
+                                         "BINDS":  3,
+                                         "PART_OF":  7,
+                                         "BIOMARKER_FOR":  1
                                      }
               }
 }

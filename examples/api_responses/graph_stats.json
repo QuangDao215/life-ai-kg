@@ -1,27 +1,30 @@
 ﻿{
-    "entity_count":  44,
-    "relation_count":  57,
-    "evidence_count":  68,
+    "entity_count":  1258,
+    "relation_count":  2174,
+    "evidence_count":  2546,
     "entities_by_type":  {
-                             "Biomarker":  10,
-                             "Phenotype":  7,
-                             "Disease":  7,
-                             "Pathway":  5,
-                             "Tissue/Region":  5,
-                             "Gene":  4,
-                             "Protein":  4,
-                             "Compound/Drug":  2
+                             "Phenotype":  343,
+                             "Compound/Drug":  205,
+                             "Disease":  147,
+                             "Protein":  141,
+                             "Biomarker":  121,
+                             "Pathway":  99,
+                             "CellType":  89,
+                             "Tissue/Region":  58,
+                             "Gene":  55
                          },
     "relations_by_label":  {
-                               "ASSOCIATED_WITH":  20,
-                               "INCREASES_RISK":  9,
-                               "EXPRESSED_IN":  8,
-                               "UPREGULATES":  7,
-                               "PART_OF":  4,
-                               "DOWNREGULATES":  3,
-                               "BIOMARKER_FOR":  2,
-                               "DECREASES_RISK":  2,
-                               "BINDS":  2
+                               "ASSOCIATED_WITH":  945,
+                               "PART_OF":  236,
+                               "EXPRESSED_IN":  194,
+                               "INCREASES_RISK":  162,
+                               "UPREGULATES":  148,
+                               "BIOMARKER_FOR":  142,
+                               "DECREASES_RISK":  106,
+                               "DOWNREGULATES":  88,
+                               "ACTIVATES":  62,
+                               "INHIBITS":  61,
+                               "BINDS":  30
                            },
-    "average_confidence":  0.889
+    "average_confidence":  0.897
 }

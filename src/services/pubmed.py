@@ -109,7 +109,7 @@ class PubMedArticle:
 
     pmid: str
     title: str
-    abstract: str = ""
+    abstract: str | None = None
     authors: list[Author] = field(default_factory=list)
     journal: str = ""
     publication_date: date | None = None
@@ -540,16 +540,16 @@ class PubMedClient:
         # Get all text including tail text from children
         return "".join(elem.itertext()).strip()
 
-    def _parse_abstract(self, elem: etree._Element) -> str:
+    def _parse_abstract(self, elem: etree._Element) -> str | None:
         """Parse abstract, handling structured abstracts with sections."""
         abstract_elem = elem.find(".//Abstract")
         if abstract_elem is None:
-            return ""
+            return None
 
         # Handle structured abstracts (multiple AbstractText elements)
         abstract_texts = abstract_elem.findall(".//AbstractText")
         if not abstract_texts:
-            return ""
+            return None
 
         parts = []
         for text_elem in abstract_texts:

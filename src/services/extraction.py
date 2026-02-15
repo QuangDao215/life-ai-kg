@@ -89,11 +89,16 @@ For each relation, provide:
    - PART_OF: Head is part of tail
    - EXPRESSED_IN: Head is expressed in tail (gene/protein in tissue/cell)
 4. confidence: Your confidence score from 0.0 to 1.0
-5. evidence: The EXACT quote from the text that supports this relation (copy verbatim)
+5. evidence: A word-for-word quote copied directly from the text. Must be a complete,
+   contiguous passage — do NOT use "..." or ellipsis to skip content.
 
 Rules:
 - Only extract relations that are EXPLICITLY stated or strongly implied in the text
-- The evidence quote must be copied EXACTLY from the source text
+- The evidence field must be an EXACT, VERBATIM copy-paste from the source text
+- NEVER use "..." or ellipsis to shorten or skip parts of the quote
+- NEVER paraphrase, reword, reorder, or add/remove any words
+- The quote must be a single contiguous passage that appears in the text exactly as written
+- If the supporting text is too long, select a shorter but complete sentence instead
 - Head and tail must be from the provided entities list
 - Be conservative with confidence - use 0.9+ only for very explicit statements
 - Prefer specific relations over ASSOCIATED_WITH when appropriate
@@ -158,20 +163,19 @@ class ExtractedRelation:
 
 @dataclass
 class ExtractionResult:
-    """Result of extracting from a single chunk."""
-
     chunk_id: UUID
     document_id: UUID
     entities: list[ExtractedEntity] = field(default_factory=list)
     relations: list[ExtractedRelation] = field(default_factory=list)
-    entity_count: int = 0
-    relation_count: int = 0
     error: str | None = None
 
-    def __post_init__(self):
-        """Update counts."""
-        self.entity_count = len(self.entities)
-        self.relation_count = len(self.relations)
+    @property
+    def entity_count(self) -> int:
+        return len(self.entities)
+
+    @property
+    def relation_count(self) -> int:
+        return len(self.relations)
 
 
 @dataclass
@@ -404,7 +408,11 @@ TEXT:
             return relations
 
         except (json.JSONDecodeError, KeyError, ValueError) as e:
-            logger.error("Failed to parse relation response", error=str(e))
+            logger.error(
+                "Failed to parse relation response",
+                error=str(e),
+                raw_response=response[:2000],  # First 500 chars
+            )
             raise LLMParseError(f"Failed to parse relation response: {e}") from e
 
     def _extract_json(self, text: str) -> str:
@@ -445,6 +453,17 @@ TEXT:
 
         # Fix missing commas after } followed by "
         json_str = re.sub(r'}\s*\n\s*"', r'},\n"', json_str)
+
+        try:
+            json.loads(json_str)
+            return json_str
+        except json.JSONDecodeError:
+            # Find last complete object (last '},' or '}]')
+            last_complete = json_str.rfind('},')
+            if last_complete > 0:
+                truncated = json_str[:last_complete + 1]  # Keep up to the last complete '}'
+                truncated += ']}'  # Close the array and outer object
+                return truncated
 
         return json_str
 
@@ -842,7 +861,6 @@ TEXT:
         result = await self.db.execute(
             select(Evidence).where(
                 Evidence.relation_id == relation.id,
-                Evidence.chunk_id == chunk.id,
                 Evidence.quote_hash == quote_hash,
             )
         )
@@ -900,7 +918,6 @@ TEXT:
         result = await self.db.execute(
             select(Evidence).where(
                 Evidence.relation_id == relation.id,
-                Evidence.chunk_id == chunk_id,
                 Evidence.quote_hash == quote_hash,
             )
         )

@@ -328,8 +328,8 @@ Examples:
     parser.add_argument(
         "--delay", "-d",
         type=int,
-        default=2,
-        help="Delay in seconds between chunks (default: 2)",
+        default=10,
+        help="Delay in seconds between chunks (default: 5)",
     )
 
     parser.add_argument(

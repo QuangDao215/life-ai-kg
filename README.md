@@ -6,6 +6,8 @@ A biomedical Knowledge Graph pipeline that collects PubMed literature on Ambroxo
 PubMed → Chunking → Gemini LLM → PostgreSQL KG → FastAPI → Interactive Graph
 ```
 
+**Current graph:** 1,258 entities · 2,174 relations · 2,546 evidence records · 90 documents · 99.55% chunk coverage · [PASS evaluation](examples/EVAL_REPORT.md)
+
 ---
 
 ## Quick Start
@@ -242,11 +244,34 @@ Runs 7 domain-specific sanity checks:
 
 Also computes quality metrics: duplicate detection, orphan analysis, evidence coverage, and confidence statistics.
 
+**Current results (v0.2.0):** 7/7 sanity checks PASS, 0 duplicate entities/relations/evidence, 100% evidence coverage, 0.897 average confidence.
+
 **Pre-generated artifacts** (from `.\run-demo.ps1`):
 
 - `examples/EVAL_REPORT.md` — Full evaluation report with all sanity checks and metrics
 - `examples/api_responses/` — Saved API responses from graph exploration endpoints (entity search, neighborhood, subgraph, path finding, job status)
 - `examples/kg_visualization.html` — Interactive graph visualization (open in browser)
+
+---
+
+## Maintenance Scripts
+
+### Evidence Deduplication
+
+Overlapping chunks can produce duplicate evidence records (same quote for the same relation from different chunks). Use the deduplication script to clean these up:
+
+```bash
+# Preview what would be deleted (dry run)
+python scripts/dedup_evidence.py
+
+# Delete duplicate evidence records
+python scripts/dedup_evidence.py --execute
+
+# Delete duplicates and add a UNIQUE constraint to prevent future duplicates
+python scripts/dedup_evidence.py --execute --add-constraint
+```
+
+The script keeps the earliest evidence record per `(relation_id, quote_hash)` and removes later duplicates. The optional `--add-constraint` flag adds a database-level uniqueness guarantee.
 
 ---
 
@@ -313,6 +338,7 @@ life-ai-kg/
 │   ├── fetch_pubmed.py         # CLI: fetch PubMed articles
 │   ├── chunk_documents.py      # CLI: chunk all documents
 │   ├── extract_kg.py           # CLI: run KG extraction pipeline
+│   ├── dedup_evidence.py       # CLI: deduplicate evidence records
 │   ├── visualize.py            # CLI: generate interactive graph HTML
 │   └── eval.py                 # CLI: run evaluation harness
 ├── tests/
@@ -328,8 +354,10 @@ life-ai-kg/
 ├── Makefile                    # Development shortcuts
 ├── setup.ps1 / setup.sh       # One-command setup
 ├── run-demo.ps1 / run-demo.sh # One-command demo
-├── reset.ps1                  # Stop services + clean data
-└── DESIGN.md                   # Technical design document
+├── reset.ps1                   # Stop services + clean data
+├── DESIGN.md                   # Technical design document
+├── CHANGELOG.md                # Version history and changes
+└── KNOWN_ISSUES.md             # Known issues and quality tracking
 ```
 
 ---
@@ -417,6 +445,14 @@ After reset:
 ## Architecture
 
 See [DESIGN.md](DESIGN.md) for detailed architecture decisions, data model, extraction pipeline design, and evaluation strategy.
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for version history and detailed changes.
+
+## Known Issues
+
+See [KNOWN_ISSUES.md](KNOWN_ISSUES.md) for current issues, resolved items, and quality metrics.
 
 ## License
 

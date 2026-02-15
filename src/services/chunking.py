@@ -517,7 +517,10 @@ class ChunkingService:
         # Get documents to process
         if replace_existing:
             # Get all documents with abstracts
-            query = select(Document).where(Document.abstract.isnot(None))
+            query = select(Document).where(
+                Document.abstract.isnot(None),
+                Document.abstract != "",
+            )
         else:
             # Get documents without chunks
             subquery = select(Chunk.document_id).distinct()

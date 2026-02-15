@@ -2,8 +2,8 @@
     "paths":  [
                   {
                       "source":  {
-                                     "id":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
-                                     "name":  "ambroxol",
+                                     "id":  "019c55ea-2034-70f1-aaf8-93bb18cd3adc",
+                                     "name":  "Ambroxol hydrochloride",
                                      "type":  "Compound/Drug",
                                      "relation_count":  0
                                  },
@@ -13,17 +13,81 @@
                                      "type":  "Biomarker",
                                      "relation_count":  0
                                  },
-                      "path_length":  2,
+                      "path_length":  4,
                       "steps":  [
                                     {
                                         "entity":  {
-                                                       "id":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
-                                                       "name":  "ambroxol",
+                                                       "id":  "019c55ea-2034-70f1-aaf8-93bb18cd3adc",
+                                                       "name":  "Ambroxol hydrochloride",
                                                        "type":  "Compound/Drug",
                                                        "relation_count":  0
                                                    },
                                         "relation":  null,
                                         "direction":  null,
+                                        "evidence":  [
+
+                                                     ]
+                                    },
+                                    {
+                                        "entity":  {
+                                                       "id":  "019c5293-d289-7d97-acb5-211f062139e1",
+                                                       "name":  "glucocerebrosidase",
+                                                       "type":  "Protein",
+                                                       "relation_count":  0
+                                                   },
+                                        "relation":  {
+                                                         "id":  "019c55ea-20c1-779c-8da3-b3e884c456f2",
+                                                         "head_id":  "019c55ea-2034-70f1-aaf8-93bb18cd3adc",
+                                                         "tail_id":  "019c5293-d289-7d97-acb5-211f062139e1",
+                                                         "label":  "ACTIVATES",
+                                                         "confidence":  0.9,
+                                                         "created_at":  "2026-02-13T07:32:12.979610Z",
+                                                         "head":  {
+                                                                      "id":  "019c55ea-2034-70f1-aaf8-93bb18cd3adc",
+                                                                      "name":  "Ambroxol hydrochloride",
+                                                                      "type":  "Compound/Drug",
+                                                                      "relation_count":  0
+                                                                  },
+                                                         "tail":  {
+                                                                      "id":  "019c5293-d289-7d97-acb5-211f062139e1",
+                                                                      "name":  "glucocerebrosidase",
+                                                                      "type":  "Protein",
+                                                                      "relation_count":  0
+                                                                  }
+                                                     },
+                                        "direction":  "forward",
+                                        "evidence":  [
+
+                                                     ]
+                                    },
+                                    {
+                                        "entity":  {
+                                                       "id":  "019c2cb2-42e2-7913-8aa4-1d1af926d03a",
+                                                       "name":  "Î±-synuclein levels",
+                                                       "type":  "Biomarker",
+                                                       "relation_count":  0
+                                                   },
+                                        "relation":  {
+                                                         "id":  "019c5602-26e0-7959-9965-ab2b28ceb915",
+                                                         "head_id":  "019c5293-d289-7d97-acb5-211f062139e1",
+                                                         "tail_id":  "019c2cb2-42e2-7913-8aa4-1d1af926d03a",
+                                                         "label":  "DOWNREGULATES",
+                                                         "confidence":  0.95,
+                                                         "created_at":  "2026-02-13T07:58:27.118668Z",
+                                                         "head":  {
+                                                                      "id":  "019c5293-d289-7d97-acb5-211f062139e1",
+                                                                      "name":  "glucocerebrosidase",
+                                                                      "type":  "Protein",
+                                                                      "relation_count":  0
+                                                                  },
+                                                         "tail":  {
+                                                                      "id":  "019c2cb2-42e2-7913-8aa4-1d1af926d03a",
+                                                                      "name":  "Î±-synuclein levels",
+                                                                      "type":  "Biomarker",
+                                                                      "relation_count":  0
+                                                                  }
+                                                     },
+                                        "direction":  "forward",
                                         "evidence":  [
 
                                                      ]
@@ -36,16 +100,16 @@
                                                        "relation_count":  0
                                                    },
                                         "relation":  {
-                                                         "id":  "019c2cb3-0712-7015-8de4-fb2bff045a22",
-                                                         "head_id":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
+                                                         "id":  "019c55f1-38fe-7f33-bae8-e7f22757a479",
+                                                         "head_id":  "019c2cb2-42e2-7913-8aa4-1d1af926d03a",
                                                          "tail_id":  "019c2cb2-42ea-7c98-bde0-50a6e4563e03",
                                                          "label":  "EXPRESSED_IN",
                                                          "confidence":  0.9,
-                                                         "created_at":  "2026-02-05T07:27:36.189240Z",
+                                                         "created_at":  "2026-02-13T07:39:57.957171Z",
                                                          "head":  {
-                                                                      "id":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
-                                                                      "name":  "ambroxol",
-                                                                      "type":  "Compound/Drug",
+                                                                      "id":  "019c2cb2-42e2-7913-8aa4-1d1af926d03a",
+                                                                      "name":  "Î±-synuclein levels",
+                                                                      "type":  "Biomarker",
                                                                       "relation_count":  0
                                                                   },
                                                          "tail":  {
@@ -74,12 +138,12 @@
                                                      ]
                                     }
                                 ],
-                      "total_confidence":  0.81
+                      "total_confidence":  0.69255
                   }
               ],
     "source":  {
-                   "id":  "019c2cb2-42d1-7574-829b-301ed2a3f915",
-                   "name":  "ambroxol",
+                   "id":  "019c55ea-2034-70f1-aaf8-93bb18cd3adc",
+                   "name":  "Ambroxol hydrochloride",
                    "type":  "Compound/Drug",
                    "relation_count":  0
                },
@@ -90,6 +154,6 @@
                    "relation_count":  0
                },
     "path_count":  1,
-    "shortest_path_length":  2,
+    "shortest_path_length":  4,
     "searched_depth":  4
 }

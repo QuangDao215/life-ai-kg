@@ -232,7 +232,7 @@ Write-Step "STEP 4: Polling job status"
 Write-Info "GET /api/v1/jobs/$jobId"
 Write-Host ""
 
-$maxWaitSeconds = 600
+$maxWaitSeconds = 20000
 $waitedSeconds = 0
 $pollInterval = 3
 $lastStatus = ""

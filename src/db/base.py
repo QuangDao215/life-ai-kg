@@ -49,7 +49,7 @@ metadata = MetaData(naming_convention=NAMING_CONVENTION)
 # - max_overflow: Additional connections allowed beyond pool_size
 engine = create_async_engine(
     settings.db_url,
-    echo=settings.is_development,  # Log SQL in dev mode only
+    echo=False,                    # Default to False
     pool_pre_ping=True,            # Check connection health before use
     pool_size=5,                   # Base number of connections
     max_overflow=10,               # Allow up to 15 total (5 + 10)

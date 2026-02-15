@@ -1,21 +1,21 @@
 ﻿{
-    "id":  "019c2cb1-dbfa-7732-85ab-c5fbf29769ba",
+    "id":  "019c5a7c-b6c1-72df-ae28-93439dde6af4",
     "job_type":  "kg_build",
     "status":  "completed",
     "progress":  100.0,
-    "total_items":  20,
-    "processed_items":  20,
-    "error_count":  9,
+    "total_items":  1,
+    "processed_items":  1,
+    "error_count":  0,
     "error_message":  null,
     "result":  {
-                   "processed_chunks":  20,
+                   "processed_chunks":  1,
                    "total_entities":  0,
                    "total_relations":  0,
-                   "new_entities":  44,
-                   "new_relations":  57,
-                   "errors":  9
+                   "new_entities":  1258,
+                   "new_relations":  2174,
+                   "errors":  0
                },
-    "created_at":  "2026-02-05T07:26:19.642536",
-    "started_at":  "2026-02-05T07:26:20.260782",
-    "completed_at":  "2026-02-05T07:35:23.921579"
+    "created_at":  "2026-02-14T04:50:48.641897",
+    "started_at":  "2026-02-14T04:50:49.320183",
+    "completed_at":  "2026-02-14T04:50:54.063058"
 }

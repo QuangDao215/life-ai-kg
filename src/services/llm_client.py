@@ -28,6 +28,7 @@ from tenacity import (
     retry_if_exception_type,
     stop_after_attempt,
     wait_random_exponential,
+    before_sleep, 
 )
 
 from src.core.config import settings
@@ -35,6 +36,16 @@ from src.core.logging import get_logger
 
 logger = get_logger(__name__)
 
+def _log_retry(retry_state):
+    """Log the actual exception on each retry."""
+    exception = retry_state.outcome.exception()
+    logger.warning(
+        "Gemini retry",
+        attempt=retry_state.attempt_number,
+        error_type=type(exception).__name__,
+        error=str(exception),
+        next_wait=retry_state.next_action.sleep,
+    )
 
 # =============================================================================
 # Enums and Constants
@@ -223,12 +234,13 @@ class GeminiClient(BaseLLMClient):
         retry=retry_if_exception_type((httpx.HTTPError, LLMRateLimitError)),
         stop=stop_after_attempt(5),
         wait=wait_random_exponential(multiplier=1, min=2, max=30),
+        before_sleep=_log_retry,
     )
     async def complete(
         self,
         messages: list[LLMMessage],
         temperature: float = 0.0,
-        max_tokens: int = 4096,
+        max_tokens: int = 8192,
     ) -> LLMResponse:
         """Generate completion using Google Gemini API."""
         # Build the API URL

@@ -2,7 +2,7 @@
 
 ## LIFE AI Knowledge Graph Backend
 
-**Version:** 0.1.0
+**Version:** 0.2.0
 **Date:** February 2026
 **Author:** Rito
 
@@ -143,7 +143,7 @@ All entity types and relation labels are enforced by PostgreSQL enums, preventin
 
 **Entity Deduplication via `normalized_name`** — Entities are deduplicated by their lowercase, underscore-joined normalized name. "Ambroxol", "ambroxol hydrochloride", and "AMB" all map to the same entity. Subsequent mentions are merged into the aliases array.
 
-**Evidence as First-Class Citizen** — Every relation must have at least one evidence record containing the source quote and character offsets. Evidence records have a `quote_hash` (SHA256) to prevent duplicate storage while enabling efficient lookups.
+**Evidence as First-Class Citizen** — Every relation must have at least one evidence record containing the source quote and character offsets. Evidence records have a `quote_hash` (SHA256) to prevent duplicate storage while enabling efficient lookups. As of v0.2.0, evidence is deduplicated by `(relation_id, quote_hash)` across all chunks, preventing duplicates from overlapping chunk windows.
 
 **Idempotent Pipeline** — The extraction pipeline uses `processed` flags on chunks and hash-based uniqueness constraints on evidence. Re-running extraction on the same data is safe and produces no duplicates.
 
@@ -183,6 +183,10 @@ Both passes use structured JSON prompts with the controlled vocabulary embedded 
 - `GeminiClient` — Production client using Google Gemini 2.5 Flash via REST API
 - `MockLLMClient` — Deterministic test client returning predefined responses
 
+**Token Limits:** The Gemini generation config uses `max_output_tokens: 8192` for relation extraction. This was increased from 2048 in v0.2.0 after discovering that relation responses were being truncated mid-JSON, causing systematic parse failures across all chunks (see Section 4.5).
+
+**Rate Limiting:** The pipeline uses configurable delays to stay within Gemini free-tier quotas: `chunk_delay_seconds` (default: 10) between chunks, and `call_delay_seconds` (default: 1) between entity and relation calls within a chunk. Both are tunable via `ExtractionService` constructor parameters.
+
 ### 4.3 Chunking Strategy
 
 Documents are split into chunks using sentence-aware boundaries:
@@ -194,10 +198,31 @@ Documents are split into chunks using sentence-aware boundaries:
 
 ### 4.4 Error Handling
 
-- **LLM parse failures**: Logged and skipped (chunk marked unprocessed for retry)
+- **LLM parse failures**: Logged with raw response (first 2000 chars) and skipped; chunk remains unprocessed for retry
+- **Truncated responses**: `_repair_json()` salvages complete objects from truncated JSON (see Section 4.5)
 - **Schema violations**: Entities/relations with invalid types are silently dropped
-- **Rate limits**: Exponential backoff with jitter (tenacity library)
-- **Partial failures**: Each chunk is independent; failures don't block other chunks
+- **Rate limits**: Exponential backoff with jitter (tenacity library), configurable inter-chunk delays
+- **Partial failures**: Each chunk is committed independently; relation extraction failures still save entities
+- **Greenlet safety**: Chunk data is pre-extracted into plain dicts before the processing loop to avoid SQLAlchemy greenlet errors after rollbacks
+
+### 4.5 JSON Repair and Truncation Recovery
+
+LLM responses are not always valid JSON. The `_repair_json()` method in `extraction.py` handles common issues:
+
+1. **Trailing commas** — Removes commas before `]` or `}`
+2. **Missing commas** — Inserts commas between adjacent objects or after values
+3. **Truncated responses** — When `json.loads()` fails after basic repairs, finds the last complete JSON object (`},`) and closes the array/object structure, salvaging all fully-formed items
+
+This repair pipeline was critical for achieving 0% error rate. Before the `max_output_tokens` fix (v0.2.0), 96% of relation extractions failed because Gemini responses were truncated at the token limit. The truncation recovery now acts as a safety net: even if a response is cut off, all complete relation objects before the truncation point are preserved.
+
+### 4.6 Evidence Deduplication
+
+Evidence records are deduplicated at two levels:
+
+1. **Within a chunk** — An in-memory set of `(relation_id, quote_hash)` prevents duplicate evidence within a single chunk's extraction
+2. **Across chunks** — Database-level dedup check uses `(relation_id, quote_hash)` without `chunk_id`, preventing the same quote from creating duplicate evidence when it appears in overlapping chunks
+
+A maintenance script (`scripts/dedup_evidence.py`) is provided for one-time cleanup of historical duplicates, with an optional `UNIQUE(relation_id, quote_hash)` database constraint for enforcement.
 
 ---
 
@@ -273,7 +298,7 @@ All responses follow a consistent structure with Pydantic schemas. Relations inc
 
 **PostgreSQL 16** was chosen over graph-specific databases (Neo4j) because:
 
-- The dataset is moderate-scale (hundreds of entities, thousands of relations)
+- The dataset is moderate-scale (thousands of entities, thousands of relations)
 - SQL joins efficiently handle 2–3 hop traversals needed for this domain
 - Alembic migrations provide schema evolution
 - Full ACID compliance for concurrent pipeline writes
@@ -290,6 +315,7 @@ All responses follow a consistent structure with Pydantic schemas. Relations inc
 | `ix_relations_label` | relations | Label-filtered queries |
 | `ix_evidence_relation_id` | evidence | Evidence per relation |
 | `ix_evidence_quote_hash` | evidence | Deduplication |
+| `uq_evidence_relation_quote` | evidence | Unique constraint on (relation_id, quote_hash) — optional, added via `dedup_evidence.py --add-constraint` |
 | `ix_chunks_document_id` | chunks | Document's chunks |
 | `ix_chunks_processed` | chunks | Pipeline progress |
 
@@ -356,7 +382,26 @@ The evaluation harness runs 7 domain-specific sanity checks:
 
 It also computes quality metrics: duplicate detection, orphan relations, evidence coverage, and confidence statistics.
 
-### 8.2 Interactive Visualization (`scripts/visualize.py`)
+**Current results (v0.2.0):** All 7 sanity checks pass. Overall score: PASS.
+
+### 8.2 Current Graph Statistics
+
+| Metric | Value |
+|--------|-------|
+| Documents | 90 |
+| Chunks | 223 (222 processed, 99.55%) |
+| Entities | 1,258 across 9 types |
+| Relations | 2,174 across 11 labels |
+| Evidence records | 2,546 |
+| Evidence coverage | 100% (all relations have evidence) |
+| Average confidence | 0.897 |
+| Duplicate entities | 0 |
+| Duplicate relations | 0 |
+| Duplicate evidence | 0 |
+| Orphan entities | 119 (9.5%) |
+| Evidence validity (sampled) | 90% |
+
+### 8.3 Interactive Visualization (`scripts/visualize.py`)
 
 Generates an interactive HTML graph using pyvis (vis.js) with:
 
@@ -389,11 +434,40 @@ All configuration is via environment variables (12-factor app), loaded through P
 
 ---
 
-## 10. Future Work
+## 10. Lessons Learned
 
-- **Full extraction completion** — Run pipeline on all 912 chunks (currently ~5%)
-- **Entity resolution** — ML-based coreference to merge entity variants more aggressively
+### 10.1 LLM Output Token Limits
+
+The most impactful bug was caused by `max_output_tokens` being too low (2048) for relation extraction. Gemini responses were silently truncated mid-JSON, producing syntactically invalid output. The error message (`Expecting ',' delimiter`) was misleading — it appeared to be a formatting issue rather than truncation. Diagnosis required logging the raw LLM response, which revealed the response was cut off mid-string. Increasing to 8192 tokens resolved 96% of extraction failures.
+
+**Takeaway:** Always set generous output token limits for structured JSON extraction, and log raw responses on parse failures.
+
+### 10.2 Chunk Overlap and Evidence Deduplication
+
+The 200-character chunk overlap ensures context continuity but creates a subtle issue: the same evidence quote can appear in two adjacent chunks, producing duplicate evidence records. The original dedup check included `chunk_id`, which allowed cross-chunk duplicates. Changing to `(relation_id, quote_hash)` without `chunk_id` resolved this.
+
+**Takeaway:** When using overlapping windows, deduplication logic must account for the same content appearing in multiple windows.
+
+### 10.3 Dataclass Properties vs Fields
+
+`ExtractionResult` used `__post_init__` to compute `entity_count` and `relation_count`, but these were calculated at construction time when lists were empty. The lists were populated after construction, leaving counts permanently at zero. Replacing fields with `@property` accessors that dynamically compute from list lengths fixed the reporting bug.
+
+**Takeaway:** For dataclass fields derived from mutable collections, use `@property` accessors instead of `__post_init__` computation.
+
+### 10.4 SQLAlchemy Greenlet Safety in Async Loops
+
+After a database rollback, all SQLAlchemy ORM objects in the session become expired. Accessing any attribute on an expired object triggers a synchronous database refresh, which fails in async context with a greenlet error. Pre-extracting all needed data into plain dicts before the processing loop prevents this.
+
+**Takeaway:** In async batch processing with potential rollbacks, extract ORM data into plain data structures upfront.
+
+---
+
+## 11. Future Work
+
+- **Evidence quote validation** — Post-extraction pass to verify all evidence quotes exist verbatim in their source chunks; flag or remove hallucinated quotes (~10% estimated)
+- **Entity resolution** — ML-based coreference to merge entity variants more aggressively (currently 119 orphan entities at 9.5%)
 - **Vector embeddings** — Add semantic search via pgvector
 - **Graph algorithms** — PageRank, community detection for entity importance
 - **Incremental updates** — Schedule daily PubMed ingestion for new publications
+- **Paid LLM tier** — Upgrade from Gemini free tier to eliminate rate limit constraints
 - **Frontend** — React dashboard with interactive graph exploration

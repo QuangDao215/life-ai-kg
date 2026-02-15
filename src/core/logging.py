@@ -8,6 +8,8 @@ import structlog
 
 from src.core.config import settings
 
+logging.getLogger("sqlalchemy.engine").setLevel(logging.WARNING)
+logging.getLogger("sqlalchemy.pool").setLevel(logging.WARNING)
 
 def setup_logging() -> None:
     """Configure structured logging for the application."""
